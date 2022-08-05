@@ -53,8 +53,8 @@ jobs:
 
       # Deployment Kubernetes
       - uses: Azure/k8s-deploy@v3.1
-          with:
-             namespace: 'kube-news'
-             manifests: |
-                k8s/deployment-k8s-digi.yaml
-             images: 'maurofelipe/app-kube-news:v${{github.run_number}}'
+        with:
+          namespace: 'kube-news'
+          manifests: |
+            k8s/deployment-k8s-digi.yaml
+          images: 'maurofelipe/app-kube-news:v${{github.run_number}}'
