@@ -4,6 +4,7 @@ metadata:
   labels:
     app: db-postgres
   name: db-postgres
+  namespace: kube-news
 spec:
   replicas: 1
   selector:
@@ -34,6 +35,7 @@ metadata:
   labels:
     app: db-postgres 
   name: service-postgres
+  namespace: kube-news
 spec:
   ports:
   - port: 5432
@@ -47,6 +49,7 @@ metadata:
   labels:
     app: app-kubenews
   name: app-kubenews
+  namespace: kube-news
 spec:
   replicas: 1
   selector:
@@ -84,6 +87,7 @@ metadata:
   labels:
     app: app-kubenews
   name: service-app-kubenews
+  namespace: kube-news
 spec:
   ports:
   - port: 80
