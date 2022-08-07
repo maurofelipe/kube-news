@@ -14,10 +14,6 @@ spec:
     metadata:
       labels:
         app: db-postgres
-      annotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/path: /metrics
-        prometheus.io/port: "5432"
     spec:
       containers:
         - image: postgres:14.3
